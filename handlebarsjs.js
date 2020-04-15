@@ -7,7 +7,7 @@ var renderTemplates = (templateId, target) => {
    client.getEntries().then((entries) => {
       var templateTitles = $(templateId).html();
       var payload = Handlebars.compile(templateTitles)(entries);
-      //console.log(entries);
+      console.log(entries);
       $(target).append(payload);
    });
 };
